@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./wed_design/a-1/script/jquery-1.12.4.js"></script>
+    <link rel="stylesheet" href="./wed_design/a-1/css/jquery.css">
+
+</head>
+<body>
+    <button id="showpopup">팝업창보기</button>
+    <button class="btn1">버튼</button>
+    <button class="btn2">버튼 2</button>
+    <p>안녕하세요</p>
+
+    <ul class="gnb">
+        <li> <a href="#">뉴스</a>
+        <ul>
+            <li><a href="">정치</a></li>
+            <li><a href="">경제</a></li>
+            <li><a href="">사회</a></li>xxs
+            <li><a href="">문학</a></li>
+        </ul>
+        </li>
+
+    </ul>
+
+    <div class="box">
+        123
+
+    </div>
+
+    <div class="popup">
+        <p>안녕하세요</p>
+        <button id="closepopup">닫기</button>
+    </div>
+    <script>
+        $(function(){
+            $(".btn1").click(function(){
+                $('p').hide()
+            })
+
+            $(".btn2").click(function(){
+                $('p').show()
+                
+            })
+
+            //gnb
+            /*
+            $(".gnb").mouseenter(function(){
+                $(".snb").slideDown()
+            })
+            $(".gnb").mouseenter(function(){
+                $(".snb").slideUp()
+            })
+            */
+            
+            $(".gnb").hover(
+                function(){
+                    $(".snb").slideDown()
+                },
+                function(){
+                    $(".sub").slideUp()
+                }
+            )
+
+            //box
+            $(".box").mouseenter(function(){
+                $(this).animate({width:300, height:300}, 3000, function(){
+                    console.log  ("안녕하세요");
+                })
+            })
+
+            //popop
+
+            $(showpopup).click(function(){
+                $(".popup").show
+            })
+            
+            $(closepopup).click(function(){
+                $(".popup").show
+            })
+
+        })
+
+    </script>
+    
+</body>
+</html>
