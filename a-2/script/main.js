@@ -1,44 +1,41 @@
 $(function(){
-    //gnb
+    // gnb
     $(".gnb").hover(
-        
-        function(){
-            $("sub").stop().slideDown()
+        function() {
+            $(this).addClass("active")
+            $(".sub").stop().slideDown()
         },
-
-        function(){
-            $("sub").stop().slideUp()
+        function() {
+            $(this).removeClass("active")
+            $(".sub").stop().slideUp()
         }
+    )      
 
-    )
-
-    //modal
-    $("showModal").click(function(){
-            $("modal").show()
+    // modal
+    $("#showModal").click(function(){
+        $(".modal").show()
     })
 
-    $("closeModal").click(function(){
-        $("modal").hide()
+    $("#closeModal").click(function(){
+        $(".modal").hide()
     })
 
-    //slide
+    // slide
     setInterval(function(){
-        $(".slides").animate({top: "-100%"}, function(){
+        $(".slides").animate({left: "-100%"}, function(){
             $(this).append($(".slide").eq(0))
-            $(this).css("top", 0)
+            $(this).css("left", 0)
         })
     }, 3000)
 
-    //tab
-
-    $ (".tab_tiltle h3").click(function(){
-        $(".tab_tiltle h3").removeClass("active")
-        $(this) .addClass("active")
-    
+    // tab
+    $(".tab_title h3").click(function(){
+        $(".tab_title h3").removeClass("active")
+        $(this).addClass("active")
 
         var idx = $(this).index()
-        $ (".tab_contents .item") .hide()
-        $ (".tab_contents .item") .eq(idx).show()
-    })
+        $(".tab_contents .item").hide()
+        $(".tab_contents .item").eq(idx).show()
+    })   
 
-})
+}) 
