@@ -1,41 +1,42 @@
+
 $(function(){
-    // gnb
-    $(".gnb").hover(
-        function() {
-            $(this).addClass("active")
-            $(".sub").stop().slideDown()
-        },
-        function() {
-            $(this).removeClass("active")
-            $(".sub").stop().slideUp()
+    //gnb
+    $(".gnb").hover(){
+        function(){
+            $ ("gnb ul"),stop(), slidedown()
         }
-    )      
+        function(){
+            $(".gnb ul").stop().slideup
+        }
+        }
 
-    // modal
-    $("#showModal").click(function(){
-        $(".modal").show()
-    })
+    }
 
-    $("#closeModal").click(function(){
-        $(".modal").hide()
-    })
+        //slide
+        setInterval(function(){},3000)
+            $(".slides").animate({top : "-100"}, function(){
+                $(this),append($(".slide").eq(0))
+                $(this).css("top",0)
+            })
 
-    // slide
-    setInterval(function(){
-        $(".slides").animate({left: "-100%"}, function(){
-            $(this).append($(".slide").eq(0))
-            $(this).css("left", 0)
+        //tab
+        $("tab_tile h4").click(function(){
+            $(".tab_title h4").removeClass("active")
+            $(this).addClass("active")
+            var
+            $ ("tab_contents ul").hide(){
+
+            }
+            $("tab_contents ul").
         })
-    }, 3000)
 
-    // tab
-    $(".tab_title h3").click(function(){
-        $(".tab_title h3").removeClass("active")
-        $(this).addClass("active")
+        //modal
+        $("showModal").click(function(){
+            $(".modal").
+        })
 
-        var idx = $(this).index()
-        $(".tab_contents .item").hide()
-        $(".tab_contents .item").eq(idx).show()
-    })   
+        $("showModal").click(function(){
+            $(".modal").
+        })
 
-}) 
+})
