@@ -8,7 +8,7 @@ $(function(){
             function(){
                 $(".gnb ul").stop() .slideup()
             }
-            }
+            
         )
                
             
