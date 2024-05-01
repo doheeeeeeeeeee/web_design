@@ -1,4 +1,3 @@
-
     $(function(){
     //gnb
         $(".gnb li").hover(
@@ -19,13 +18,13 @@
     setInterval(function(){
         var nextIndex = (index + 1) % 3
         $(".slide").eq(index).fadeOut()
-        $(".slide").eq(1).fadeIn()
+        $(".slide").eq(nextIndex).fadeIn()
         index =nextIndex
     }, 3000)
 
     //tab
     $("tab_title h3").click(function(){
-        $(".tab_title h3").removeClass(".active")
+        $(".tab_title h3").removeClass("active")
         $(this).addClass("active")
 
         var idx =$(this).index()
