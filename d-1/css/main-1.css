@@ -62,8 +62,8 @@ body {
     background-color: #ddd;
     position: absolute;
     top: 0;
-    left: 180px;    
-    display: none;
+    left: 180px;
+    display: none;    
 }
 
 .gnb .sub {
@@ -74,15 +74,12 @@ body {
     gap: 30px;
     width: 600px;
     z-index: 1;
-    background-color: yellow;
-    display: none;
+    display: none;    
 }
 
 .sub li {
     width: 120px;
     height: 40px;
-    background-color: red;
-
 }
 
 .sub a {
@@ -124,167 +121,171 @@ body {
     width: calc(100% - 200px);
 }
 
-.slider{
+.slider {
     height: 400px;
     position: relative;
     overflow: hidden;
 }
 
-.slides{
+.slides {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
 }
 
-.slide{
+.slide {
     position: relative;
     height: 400px;
     width: 100%;
 }
 
-.slide h2{
+.slide h2 {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size:50px ;
-    color: white;
+    font-size: 50px;
+    color: #fff;
 }
 
-.slide img{
+.slide img {
     width: 100%;
     height: 100%;
-    overflow: co;
+    object-fit: cover;
 }
 
-.links{
+.links {
     position: absolute;
     top: 0;
     right: 0;
-    padding: 14px 10px;
     background-color: #fff;
-    text-align: center;
+    padding: 14px 10px;
+    text-align: center;    
 }
 
-.links li{
+.links li {
     border-bottom: 1px solid #999;
     margin-bottom: 13px;
     padding-bottom: 10px;
 }
 
-.links p{
+.links li:last-child {
+    margin-bottom: 0;
+    border: none;
+    margin-bottom: 0;
+}
+
+.links p {
     font-size: 14px;
 }
 
-
-.link img{
+.links img {
     width: 80px;
 }
 
-.link li:last-child{
-    border: none;
-    margin-bottom: 0;
-    padding-bottom: 0;
-}
-
-.banner{
-    display: flex;
-    border: 1px solid #999;
-    margin: 20px;
+.banner_container {
+    height: 200px;
     padding: 20px;
-    gap: 20px;
-    border-radius: 10px;
-
+    background-color: #eee;
 }
 
-.banner .icon{
-    width: 45px;
-    width: 60%;
-    height: 60%;
-    background-color: yellow;
+.banner {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    border: 1px solid #999;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: #fff;
+}
+
+.banner img {
+    width: 160px;
+}
+
+.banner .texts {
+    flex: 1;
+}
+
+.banner .texts h4 {
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+.banner .icon {
+    width: 40px;
+    height: 40px;
     border-top: 6px solid #999;
     border-right: 6px solid #999;
     transform: rotate(45deg);
     margin-right: 20px;
 }
 
-.banner img{
-    width: 160px;
-
-}
-
-.text h4{
-
-}
-
-
-.tab{
+.tab {
     height: 250px;
-    padding: 250;
-
+    padding: 20px;
 }
 
-.tab_title{
+.tab_title {
     display: flex;
-    gap: 4px;
     padding-left: 20px;
     margin-bottom: -1px;
- 
 }
 
-.tab_title h3{
+.tab_title h3 {
     width: 160px;
-    text-align: center;
-    background-color: #ddd;
     height: 50px;
     line-height: 50px;
+    text-align: center;
+    background-color: #ddd;
     border: 1px solid #999;
-}
-
-.tab_title h3:active{
-    background-color:white;
-    border-bottom: 1px solid #fff;
     cursor: pointer;
-
 }
 
+.tab_title h3.active {
+    border-bottom: 1px solid #fff;
+    background-color: #fff;
+}
 
+.tab_contents {}
 
-.tab .notice{
-    border: 3px solid #999;
+.notice {
+    border: 1px solid #999;
     padding: 20px 36px;
-
 }
 
-.notice a:hover{
-    text-decoration: underline;
+.notice li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
-
-
-.notice a{
+.notice a {
     display: block;
     width: 80%;
-    padding: 8px 0;
+    padding: 4px 0;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
 }
 
-.gallery{
+.notice a:hover {
+    text-decoration: underline;
+}
+
+.gallery {
     display: none;
 }
 
-.banner .texts{
-    flex: 1;
-}
+
+
 
 .footer {
     display: flex;
     height: 100px;
     align-items: center;
-    display: none;
+    background-color: #ddd;
 }
 
 .f_logo {
